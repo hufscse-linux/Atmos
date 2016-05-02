@@ -11,7 +11,9 @@ import UIKit
 class ViewController: UIViewController {
 
     
+    @IBOutlet weak var sido: UILabel!
     
+    @IBOutlet weak var CAI: UILabel!
     
     
     override func viewDidLoad() {
@@ -30,7 +32,29 @@ class ViewController: UIViewController {
         
         let apiData : NSData? = NSData(contentsOfURL: url!)
         if let data = apiData {
-            NSLog("%@",NSString(data: data, encoding: NSUTF8StringEncoding)!)
+            //NSLog("%@",NSString(data: data, encoding: NSUTF8StringEncoding)!)
+            
+            do {
+                let apiDictionary = try NSJSONSerialization.JSONObjectWithData(apiData!, options: []) as! NSDictionary
+                
+                let list = apiDictionary["list"] as! NSArray
+                
+                for row in list {
+                    let Sido = row["stationName"] as! String
+                    let caiGrade = row["khaiGrade"] as! String
+                    let atmosGrade = row["pm25Grade"] as! String
+
+                    if( Sido == "종로") {
+                        sido.text = Sido
+                        CAI.text = "CAI 수치 : \(caiGrade)"
+                    }
+                    //NSLog("---------")
+                }
+                
+            } catch {
+                
+            }
+            
         } else {
             NSLog("notgood")
         }
