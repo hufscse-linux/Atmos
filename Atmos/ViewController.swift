@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var CAI: UILabel!
     
+    @IBOutlet weak var CAIgrade: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,12 +46,14 @@ class ViewController: UIViewController {
                 
                 for row in list {
                     let Sido = row["stationName"] as! String
-                    let caiGrade = row["khaiGrade"] as! String
-                    let atmosGrade = row["pm25Grade"] as! String
+                    let caiValue = row["khaiValue"] as! String
+                    let caiGrade = Character(UnicodeScalar(64+Int(row["khaiGrade"] as! String)!))
+                    //let atmosGrade = row["pm25Grade"] as! String
 
                     if( Sido == "종로") {
                         sido.text = Sido
-                        CAI.text = "CAI 수치 : \(caiGrade)"
+                        CAI.text = "\(caiValue)"
+                        CAIgrade.text = "\(caiGrade)"//"\(caiGrade)"
                     }
                     //NSLog("---------")
                 }
