@@ -6,27 +6,27 @@ provides-nominal:
 provides-member:
 - ["C5Atmos14ViewController", ""]
 provides-dynamic-lookup:
-- "viewDidLoad"
-- "refresh"
-- "getData"
+- "sido"
 - "CAI"
 - "didReceiveMemoryWarning"
-- "sido"
+- "refresh"
+- "getData"
+- "viewDidLoad"
 depends-top-level:
+- "AnyObject"
+- !private "=="
+- !private "NSURL"
+- "UILabel"
+- !private "NSDictionary"
+- !private "NSLog"
+- !private "NSData"
 - !private "StringLiteralType"
+- "ViewController"
+- !private "NSArray"
+- !private "NSJSONSerialization"
+- !private "Array"
 - !private "String"
 - "UIViewController"
-- !private "NSLog"
-- !private "NSJSONSerialization"
-- !private "NSArray"
-- "ViewController"
-- !private "NSData"
-- !private "=="
-- "AnyObject"
-- "UILabel"
-- !private "NSURL"
-- !private "NSDictionary"
-- !private "Array"
 depends-member:
 - ["Ps9AnyObject", "CAI"]
 - !private ["Ps9AnyObject", "Element"]
