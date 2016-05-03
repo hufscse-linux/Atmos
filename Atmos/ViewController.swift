@@ -27,15 +27,19 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func refresh(sender: AnyObject) {
+        self.getData()
+    }
+    
     func getData() {
-        let url = NSURL(string: "http://192.168.1.8:3000/")
+        let url = NSURL(string: "http://192.168.0.49:3000/")
         
         let apiData : NSData? = NSData(contentsOfURL: url!)
         if let data = apiData {
             //NSLog("%@",NSString(data: data, encoding: NSUTF8StringEncoding)!)
             
             do {
-                let apiDictionary = try NSJSONSerialization.JSONObjectWithData(apiData!, options: []) as! NSDictionary
+                let apiDictionary = try NSJSONSerialization.JSONObjectWithData(data, options: []) as! NSDictionary
                 
                 let list = apiDictionary["list"] as! NSArray
                 
