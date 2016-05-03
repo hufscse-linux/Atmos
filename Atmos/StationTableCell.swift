@@ -10,4 +10,5 @@ import Foundation
 import UIKit
 class StationTableCell: UITableViewCell {
     
+    @IBOutlet weak var stationName: UILabel!
 }
