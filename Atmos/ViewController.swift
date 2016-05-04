@@ -43,6 +43,7 @@ class ViewController: UIViewController {
             NSLog("----  \(sido.text)")
         } else {
             sido.text = "종로"
+            NSLog("Default Station")
         }
         NSLog("--------------")
         let url = NSURL(string: "http://10.100.69.62:3000/")
@@ -59,19 +60,18 @@ class ViewController: UIViewController {
                 for row in list {
                     let Sido = row["stationName"] as! String
                     let caiValue = row["khaiValue"] as! String
-                    //let caiGrade = Character(UnicodeScalar(64+Int(row["khaiGrade"] as! String)!))
-                    let caiGrade = row["khaiGrade"] as! String
-                    //let atmosGrade = row["pm25Grade"] as! String
-
+                    var caiGrade : Character?
+                    if(caiValue != "-") {
+                        caiGrade = Character(UnicodeScalar(64+Int(row["khaiGrade"] as! String)!))
+                    } else {
+                        caiGrade = "-"
+                    }
+                    
                     if( Sido == sido.text) {
                         sido.text = Sido
                         CAI.text = "\(caiValue)"
-                        CAIgrade.text = "\(caiGrade)"
-                        //let test = Int(CAIgrade.text!)
-                        //let test2 = Character(UnicodeScalar(64+test!))
-                        //CAIgrade.text = "\(test2)"
+                        CAIgrade.text = "\(caiGrade!)"
                     }
-                    //NSLog("---------")
                 }
                 
             } catch {
