@@ -29,4 +29,10 @@ class StationTableViewController: UITableViewController {
         
         return cell
     }
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let userDefaults = NSUserDefaults()
+        let selectedStationName = self.list[indexPath.row]
+        
+        userDefaults.setObject(selectedStationName, forKey: "selectStationName")
+    }
 }

@@ -20,6 +20,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        /*let userDefaults = NSUserDefaults.standardUserDefaults()
+        if let stationName = userDefaults.objectForKey("selectStationName") as? String {
+            sido.text = stationName
+        }*/
         self.getData()
     }
 
@@ -33,7 +37,15 @@ class ViewController: UIViewController {
     }
     
     func getData() {
-        let url = NSURL(string: "http://192.168.0.49:3000/")
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        if let stationName = userDefaults.objectForKey("selectStationName") as? String {
+            sido.text = stationName
+            NSLog("----  \(sido.text)")
+        } else {
+            sido.text = "종로"
+        }
+        NSLog("--------------")
+        let url = NSURL(string: "http://10.100.69.62:3000/")
         
         let apiData : NSData? = NSData(contentsOfURL: url!)
         if let data = apiData {
@@ -51,13 +63,13 @@ class ViewController: UIViewController {
                     let caiGrade = row["khaiGrade"] as! String
                     //let atmosGrade = row["pm25Grade"] as! String
 
-                    if( Sido == "종로") {
+                    if( Sido == sido.text) {
                         sido.text = Sido
                         CAI.text = "\(caiValue)"
                         CAIgrade.text = "\(caiGrade)"
-                        let test = Int(CAIgrade.text!)
-                        let test2 = Character(UnicodeScalar(64+test!))
-                        CAIgrade.text = "\(test2)"
+                        //let test = Int(CAIgrade.text!)
+                        //let test2 = Character(UnicodeScalar(64+test!))
+                        //CAIgrade.text = "\(test2)"
                     }
                     //NSLog("---------")
                 }
