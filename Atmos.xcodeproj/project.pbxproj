@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F4B936F1CD8707300AA63FF /* LocationTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4B936E1CD8707300AA63FF /* LocationTableCell.swift */; };
+		9F4B93711CD870E300AA63FF /* LocationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4B93701CD870E300AA63FF /* LocationListViewController.swift */; };
 		9F7D140C1CD1FE2C00C27D91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7D140B1CD1FE2C00C27D91 /* AppDelegate.swift */; };
 		9F7D140E1CD1FE2C00C27D91 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7D140D1CD1FE2C00C27D91 /* ViewController.swift */; };
 		9F7D14111CD1FE2C00C27D91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F7D140F1CD1FE2C00C27D91 /* Main.storyboard */; };
 		9F7D14131CD1FE2C00C27D91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F7D14121CD1FE2C00C27D91 /* Assets.xcassets */; };
 		9F7D14161CD1FE2C00C27D91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F7D14141CD1FE2C00C27D91 /* LaunchScreen.storyboard */; };
 		9F7D14211CD1FE2D00C27D91 /* AtmosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7D14201CD1FE2D00C27D91 /* AtmosTests.swift */; };
+		9F82FEB51CD88988001350BD /* StationTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F82FEB41CD88988001350BD /* StationTableCell.swift */; };
+		9F82FEB91CD88A6B001350BD /* StationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F82FEB81CD88A6B001350BD /* StationTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F4B936E1CD8707300AA63FF /* LocationTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTableCell.swift; sourceTree = "<group>"; };
+		9F4B93701CD870E300AA63FF /* LocationListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationListViewController.swift; sourceTree = "<group>"; };
 		9F7D14081CD1FE2C00C27D91 /* Atmos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Atmos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F7D140B1CD1FE2C00C27D91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F7D140D1CD1FE2C00C27D91 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +42,8 @@
 		9F7D141C1CD1FE2D00C27D91 /* AtmosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AtmosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F7D14201CD1FE2D00C27D91 /* AtmosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtmosTests.swift; sourceTree = "<group>"; };
 		9F7D14221CD1FE2D00C27D91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F82FEB41CD88988001350BD /* StationTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationTableCell.swift; sourceTree = "<group>"; };
+		9F82FEB81CD88A6B001350BD /* StationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +88,10 @@
 				9F7D140B1CD1FE2C00C27D91 /* AppDelegate.swift */,
 				9F7D140D1CD1FE2C00C27D91 /* ViewController.swift */,
 				9F7D140F1CD1FE2C00C27D91 /* Main.storyboard */,
+				9F4B93701CD870E300AA63FF /* LocationListViewController.swift */,
+				9F4B936E1CD8707300AA63FF /* LocationTableCell.swift */,
+				9F82FEB41CD88988001350BD /* StationTableCell.swift */,
+				9F82FEB81CD88A6B001350BD /* StationTableViewController.swift */,
 				9F7D14121CD1FE2C00C27D91 /* Assets.xcassets */,
 				9F7D14141CD1FE2C00C27D91 /* LaunchScreen.storyboard */,
 				9F7D14171CD1FE2C00C27D91 /* Info.plist */,
@@ -197,8 +209,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F82FEB51CD88988001350BD /* StationTableCell.swift in Sources */,
 				9F7D140E1CD1FE2C00C27D91 /* ViewController.swift in Sources */,
+				9F4B93711CD870E300AA63FF /* LocationListViewController.swift in Sources */,
 				9F7D140C1CD1FE2C00C27D91 /* AppDelegate.swift in Sources */,
+				9F82FEB91CD88A6B001350BD /* StationTableViewController.swift in Sources */,
+				9F4B936F1CD8707300AA63FF /* LocationTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +404,7 @@
 				9F7D14271CD1FE2D00C27D91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9F7D14281CD1FE2D00C27D91 /* Build configuration list for PBXNativeTarget "AtmosTests" */ = {
 			isa = XCConfigurationList;
@@ -396,6 +413,7 @@
 				9F7D142A1CD1FE2D00C27D91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
