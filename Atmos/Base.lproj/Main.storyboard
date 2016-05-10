@@ -145,7 +145,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="stationName" destination="g0G-eX-JtO" id="pTc-VP-tJJ"/>
-                                    <segue destination="Crq-t9-jYP" kind="unwind" unwindAction="unwindToHome:" id="e47-nP-fvx"/>
+                                    <segue destination="Crq-t9-jYP" kind="unwind" unwindAction="unwindToHome:" id="j3H-dM-DE9"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

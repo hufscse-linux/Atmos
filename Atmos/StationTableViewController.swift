@@ -35,8 +35,4 @@ class StationTableViewController: UITableViewController {
         
         userDefaults.setObject(selectedStationName, forKey: "selectStationName")
     }
-    
-    @IBAction func unwindToHome(sender : UIStoryboardSegue) {
-        
-    }
 }
