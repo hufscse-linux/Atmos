@@ -70,6 +70,7 @@ class ViewController: UIViewController {
                     } else {
                         caiGrade = "-"
                     }
+                    
                     if( Sido == sido.text) {
                         sido.text = Sido
                         CAI.text = "\(caiValue)"

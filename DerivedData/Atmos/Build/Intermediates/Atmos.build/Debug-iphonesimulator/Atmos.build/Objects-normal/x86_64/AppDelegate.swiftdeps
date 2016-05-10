@@ -6,23 +6,23 @@ provides-nominal:
 provides-member:
 - ["C5Atmos11AppDelegate", ""]
 provides-dynamic-lookup:
-- "applicationDidBecomeActive"
-- "application"
-- "window"
 - "applicationWillEnterForeground"
+- "application"
 - "applicationDidEnterBackground"
 - "applicationWillTerminate"
 - "applicationWillResignActive"
+- "window"
+- "applicationDidBecomeActive"
 depends-top-level:
-- "AnyObject"
-- !private "BooleanLiteralType"
-- "UIApplication"
 - "UIResponder"
-- "Bool"
-- "UIApplicationDelegate"
-- "NSObject"
-- "AppDelegate"
 - "UIWindow"
+- "AppDelegate"
+- "Bool"
+- "UIApplication"
+- !private "BooleanLiteralType"
+- "NSObject"
+- "AnyObject"
+- "UIApplicationDelegate"
 depends-member:
 - ["Ps9AnyObject", "application"]
 - ["Ps9AnyObject", "applicationDidBecomeActive"]
