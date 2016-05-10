@@ -34,5 +34,6 @@ class StationTableViewController: UITableViewController {
         let selectedStationName = self.list[indexPath.row]
         
         userDefaults.setObject(selectedStationName, forKey: "selectStationName")
+        performSegueWithIdentifier("toHome", sender: self)
     }
 }

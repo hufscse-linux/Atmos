@@ -1,10 +1,10 @@
-version: "Apple Swift version 2.2 (swiftlang-703.0.18.1 clang-703.0.29)"
+version: "Apple Swift version 2.2 (swiftlang-703.0.18.8 clang-703.0.31)"
 options: "23e9171dbf600b0b695ad022e3105d32"
-build_time: [515575881, 512599000]
+build_time: [516177938, 164584000]
 inputs:
-  "/Users/leesunkyu/Documents/iOS/Atmos/Atmos/StationTableCell.swift": !dirty [515575791, 0]
-  "/Users/leesunkyu/Documents/iOS/Atmos/Atmos/ViewController.swift": !dirty [515575098, 0]
-  "/Users/leesunkyu/Documents/iOS/Atmos/Atmos/LocationListViewController.swift": !dirty [515575116, 0]
-  "/Users/leesunkyu/Documents/iOS/Atmos/Atmos/AppDelegate.swift": !dirty [515575062, 0]
-  "/Users/leesunkyu/Documents/iOS/Atmos/Atmos/StationTableViewController.swift": !dirty [515575703, 0]
-  "/Users/leesunkyu/Documents/iOS/Atmos/Atmos/LocationTableCell.swift": !dirty [515575098, 0]
+  "/Users/leesunkyu/Documents/iOS/Atmos/Atmos/StationTableCell.swift": [516172410, 0]
+  "/Users/leesunkyu/Documents/iOS/Atmos/Atmos/ViewController.swift": [516177937, 0]
+  "/Users/leesunkyu/Documents/iOS/Atmos/Atmos/LocationListViewController.swift": [516172410, 0]
+  "/Users/leesunkyu/Documents/iOS/Atmos/Atmos/AppDelegate.swift": [515575062, 0]
+  "/Users/leesunkyu/Documents/iOS/Atmos/Atmos/StationTableViewController.swift": [516177668, 0]
+  "/Users/leesunkyu/Documents/iOS/Atmos/Atmos/LocationTableCell.swift": [516172410, 0]
