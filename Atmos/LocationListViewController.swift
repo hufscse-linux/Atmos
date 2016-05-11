@@ -34,14 +34,17 @@ class LocationListViewController: UITableViewController{
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        indexOfList = indexPath.row
-        performSegueWithIdentifier("locationSegue", sender: self)
+        //override
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "locationSegue") {
             let destination = segue.destinationViewController as! StationTableViewController
-            //NSLog("after")
+            NSLog("after")
+            let sed = sender as! UITableViewCell
+            let label = (sed.textLabel?.text!)
+            indexOfList = list.indexOf(label!)!
+            
             if(indexOfList != -1) {
                 //NSLog("\(indexOfList as Int)")
                 destination.selectLocation = self.list[indexOfList]

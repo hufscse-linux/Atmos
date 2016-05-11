@@ -116,15 +116,19 @@ SWIFT_CLASS("_TtC5Atmos11AppDelegate")
 @class UITableView;
 @class NSIndexPath;
 @class UITableViewCell;
+@class UIStoryboardSegue;
 @class NSBundle;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC5Atmos26LocationListViewController")
 @interface LocationListViewController : UITableViewController
 @property (nonatomic, copy) NSArray<NSString *> * _Nonnull list;
+@property (nonatomic) NSInteger indexOfList;
 - (void)viewDidLoad;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -150,7 +154,12 @@ SWIFT_CLASS("_TtC5Atmos16StationTableCell")
 
 SWIFT_CLASS("_TtC5Atmos26StationTableViewController")
 @interface StationTableViewController : UITableViewController
-@property (nonatomic, copy) NSArray<NSString *> * _Nonnull list;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull seoul;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull busan;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull deagu;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull incheon;
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull gwangjoo;
+@property (nonatomic, copy) NSString * _Nullable selectLocation;
 - (void)viewDidLoad;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
@@ -160,7 +169,6 @@ SWIFT_CLASS("_TtC5Atmos26StationTableViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UIStoryboardSegue;
 
 SWIFT_CLASS("_TtC5Atmos14ViewController")
 @interface ViewController : UIViewController
