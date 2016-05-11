@@ -103,7 +103,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="locationName" destination="Z3o-kx-0RQ" id="Aeg-ie-S0V"/>
-                                    <segue destination="xCW-mj-k4U" kind="show" id="Ul8-Q2-9H3"/>
+                                    <segue destination="xCW-mj-k4U" kind="show" identifier="locationSegue" id="Ul8-Q2-9H3"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

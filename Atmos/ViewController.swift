@@ -50,7 +50,7 @@ class ViewController: UIViewController {
             NSLog("Default Station")
         }
         NSLog("--------------")
-        let url = NSURL(string: "http://192.168.1.19:3000/")
+        let url = NSURL(string: "http://172.30.1.27:3000/")
         
         let apiData : NSData? = NSData(contentsOfURL: url!)
         if let data = apiData {

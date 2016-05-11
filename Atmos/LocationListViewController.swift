@@ -12,6 +12,7 @@ import UIKit
 class LocationListViewController: UITableViewController{
     
     var list = ["서울", "부산", "대구", "인천", "광주"]
+    var indexOfList = -1
     
     override func viewDidLoad() {
         
@@ -32,6 +33,19 @@ class LocationListViewController: UITableViewController{
     
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        indexOfList = indexPath.row
+        performSegueWithIdentifier("locationSegue", sender: self)
+    }
     
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "locationSegue") {
+            let destination = segue.destinationViewController as! StationTableViewController
+            //NSLog("after")
+            if(indexOfList != -1) {
+                //NSLog("\(indexOfList as Int)")
+                destination.selectLocation = self.list[indexOfList]
+            }
+        }
+    }
 }
